@@ -1,10 +1,44 @@
 <head>
+
+    <script>
+        function loadCss(lightmode) {
+            var head = document.getElementsByTagName('head')[0];
+
+            var colours = document.createElement('link');
+            colours.id = 'col';
+            colours.rel = 'stylesheet';
+            colours.type = 'text/css';
+            colours.media = 'all';
+            if (lightmode) {
+                colours.href = 'https://thesettingmyr.github.io/css/col-light.css'
+            }
+            else {
+                colours.href = 'https://thesettingmyr.github.io/css/col-dark.css';
+            }
+            head.appendChild(colours);
+
+            var link = document.createElement('link');
+            link.id = 'css';
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.media = 'all';
+            link.href = 'https://thesettingmyr.github.io/css/main.css';
+            head.appendChild(link);
+
+            document.removeChild(document.getElementById('linkLoadCss'));
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <div style="float:left">Website for my D&amp;D setting.</div>
-        <div style="float:right"></div>
+        <div style="float:right">
+            <div id='linkLoadCss'>
+                <a href='javascript:loadCss(true)'>Load Dark</a>
+                <a href='javascript:loadCss(false)'>Load Light</a>
+            </div>
+        </div>
     </header>
 
     <div class="main">

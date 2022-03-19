@@ -1,0 +1,9 @@
+:root {
+    --back-dark: rgb(180,190,190);
+    --back-mid: rgb(200,210,210);
+    --back-light: rgb(220,230,230);
+
+    --accent-dark: rgb(190,220,200);
+    --accent-mid: rgb(210, 240, 220);
+    --accent-light: rgb(230, 255, 240);
+}
